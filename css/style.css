@@ -1,0 +1,128 @@
+body {
+    margin: 0 auto;
+}
+h1 {
+    text-align: center;
+    margin: 50px 50px;
+}
+
+#container-mario {
+    
+    position: relative;
+    /* overflow: hidden; */
+    width: 800px;
+    height: 450px;
+    margin: 0 auto;
+    
+}
+
+#bg-mario {
+    position:relative;
+    width: 100%;
+    height: 100%;
+    
+}
+
+#mario {
+    position: absolute;
+    display: none;
+    top: 275px;
+    left:0;
+    width: 75px;
+    z-index: 500;
+}
+
+#mario-win {
+    position: absolute;
+    display: none;
+    top: 275px;
+    left:0;
+    width: 75px;
+    z-index: 500;
+}
+
+#container-fleche {
+    padding: 50px;
+    text-decoration: none;
+}
+
+#flecheHaut {
+    margin-right:15px;
+    text-decoration: none;
+}
+
+#flecheDroite {
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+#flecheGauche {
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+#flecheBas {
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+#main {
+    position: absolute;
+    top: 170px;
+    left: 655px;
+    width: 100px;
+    height: 100px;
+    z-index: 100;
+}
+
+#castlePos {
+    position: absolute;
+    
+    top: 170px;
+    left: 655px;
+    background-color: yellow;
+    width: 60px;
+    height: 60px;
+    opacity: 0.5;
+    z-index: 100;
+}
+
+#victoryPos {
+    position: absolute;
+    
+    top: 55px;
+    left: 365px;
+    background-color: red;
+    width: 60px;
+    height: 60px;
+    opacity: 0.5;
+    z-index: 100;
+}
+
+#victoryBox {
+    position: absolute;
+    color: white;
+    display: none;
+    background-color: green;
+    width: 55px;
+    height: 25px;
+    top: 20px;
+    left: 365px;
+    z-index: 400;
+}
+
+#score {
+    position: absolute;
+    background-color: gray;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 40px;
+    opacity: 0.7;
+}
+
+#reset {
+    position: absolute;
+    top:410px;
+    left: 5px;
+}
