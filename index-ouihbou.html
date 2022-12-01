@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="public/script.js"></script>
+<title>index</title>
+<link href="public/css/style.css" rel="stylesheet" type="text/css">
+</head>	
+<body>
+	<p id="score">Score : <span></span> </p>
+	<button id="reset">reset</button>
+	<div id="pac">
+		<img id="pac_img" src="public/img/packman.png">
+	</div>
+	
+	
+	<img id="ballR1C1" class="balls" src="public/img/ball.png">
+	<img id="ballR1C2" class="balls" src="public/img/ball.png">
+	<img id="ballR1C3" class="balls" src="public/img/ball.png">
+	<img id="ballR1C4" class="balls" src="public/img/ball.png">
+	<img id="ballR1C5" class="balls" src="public/img/ball.png">
+	<img id="ballR1C6" class="balls" src="public/img/ball.png">
+	<img id="ballR1C7" class="balls" src="public/img/ball.png">
+	<img id="ballR1C8" class="balls" src="public/img/ball.png">
+	<img id="ballR1C9" class="balls" src="public/img/ball.png">
+	<img id="ballR1C10" class="balls" src="public/img/ball.png">
+	<img id="ballR1C11" class="balls" src="public/img/ball.png">
+	<img id="ballR1C12" class="balls" src="public/img/ball.png">
+	
+	<img id="ballR2C1" class="balls" src="public/img/ball.png">
+	<img id="ballR2C2" class="balls" src="public/img/ball.png">
+	<img id="ballR2C3" class="balls" src="public/img/ball.png">
+	<img id="ballR2C4" class="balls" src="public/img/ball.png">
+	<img id="ballR2C5" class="balls" src="public/img/ball.png">
+	<img id="ballR2C6" class="balls" src="public/img/ball.png">
+	<img id="ballR2C7" class="balls" src="public/img/ball.png">
+	<img id="ballR2C8" class="balls" src="public/img/ball.png">
+	<img id="ballR2C9" class="balls" src="public/img/ball.png">
+	<img id="ballR2C10" class="balls" src="public/img/ball.png">
+	<img id="ballR2C11" class="balls" src="public/img/ball.png">
+	<img id="ballR2C12" class="balls" src="public/img/ball.png">
+	
+	
+	<img class="monsters" id="blue_monster" src="public/img/blue_monster.png">
+	<img class="monsters" id="green_monster" src="public/img/green_monster.png">
+	<img class="monsters" id="pink_monster" src="public/img/pink_monster.png">
+	<img class="monsters" id="red_monster" src="public/img/red_monster.png">
+	
+	<!-- borders on top of maze.png image 
+	
+	<img id="layer2" usemap="#image-map" src="public/img/maze.png" >
+	-->
+	<!-- code to define borders -->
+	<map name="image-map">
+    <area target="_self" alt="wall" title="wall" href="" coords="194,85,84,163" shape="rect" onClick="return false;">
+    <area target="" alt="wall" title="wall" href="" coords="401,85,255,163" shape="rect" onClick="return false;">
+    <area target="" alt="wall" title="wall" href="" coords="559,161,705,85" shape="rect" onClick="return false;">
+    <area target="" alt="wall" title="wall" href="" coords="876,163,766,87" shape="rect" onClick="return false;">
+    <area target="" alt="wall" title="wall" href="" coords="1045,83,1158,163" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1219,83,1360,163" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1520,163,1666,83" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1725,85,1837,161" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="89,975,396,938" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="255,936,296,836" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="461,871,497,978" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="359,833,600,870" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="563,933,876,977" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="663,935,704,833" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="359,631,600,670" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="456,770,503,669" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="255,774,400,731" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="563,731,705,770" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="663,467,702,222" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="255,221,298,468" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="359,221,602,263" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="254,529,298,672" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="664,528,705,672" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="461,22,500,161" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="398,324,300,366" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="462,261,503,363" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="663,322,561,366" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="198,731,87,775" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="154,777,198,874" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="764,731,876,772" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="763,874,807,770" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="194,221,87,265" shape="rect"  onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="766,221,876,263" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1051,935,1360,977" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1523,935,1834,979" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1564,831,1319,875" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1420,977,1464,877" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1213,836,1257,935" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1623,936,1666,833" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1216,222,1257,468" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1620,224,1667,467" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1564,222,1318,265" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1321,628,1567,672" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1523,731,1667,774" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1214,733,1362,774" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1214,528,1260,670" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1623,528,1667,670" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1157,217,1048,263" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1725,221,1835,265" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1048,731,1157,777" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1725,731,1835,774" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1423,25,1462,159" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1421,366,1464,266" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1420,772,1464,670" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1260,322,1358,365" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1623,324,1523,361" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1116,874,1157,779" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1725,874,1767,775" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1319,568,1564,545" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="362,568,603,545" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="4,24,1917,0" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="3,1036,1917,1060" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="938,24,987,348" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="934,648,987,1035" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1,25,23,1035" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1895,25,1920,1038" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="764,528,1157,556" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="766,465,1158,436" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1727,461,1895,443" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="21,324,193,351" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="191,441,26,470" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1893,324,1723,348" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="26,528,196,555" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="23,643,196,667" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="26,835,91,874" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1898,528,1728,553" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1725,670,1895,643" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="934,643,766,670" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1158,670,989,643" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="939,322,763,348" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="990,322,1157,348" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="356,426,439,451" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="603,428,518,448" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1401,428,1319,451" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1482,426,1567,451" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="932,835,868,874" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1053,836,990,872" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1830,833,1896,875" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="170,351,195,439" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="172,556,196,641" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="359,451,381,545" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="578,450,603,543" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1725,348,1893,444" shape="rect" onClick="return false;">
+    <area target="_self" alt="center_top_wall" title="center_top_wall" href="" coords="1157,349,764,434" shape="rect" onClick="return false;">
+    <area target="_self" alt="center_bottom_wall" title="center_bottom_wall" href="" coords="766,556,1158,646" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1318,451,1345,543" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1542,450,1567,546" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="1728,555,1895,646" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="26,353,174,439" shape="rect" onClick="return false;">
+    <area target="_self" alt="wall" title="wall" href="" coords="26,555,169,645" shape="rect" onClick="return false;">
+</map>
+	
+</body>
+</html>
